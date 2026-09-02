@@ -1,24 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) --> 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V4H50H9G3D"></script> 
-  <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} 
-    gtag('js', new Date()); gtag('config', 'G-V4H50H9G3D'); </script>
-  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Waypoint Supply Co. — Early Access</title>
+  <!-- Your GTM <script> snippet from Phase 1 stays here -->
+  <!-- Google tag (gtag.js) --> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V4H50H9G3D"></script> 
+  <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} 
+    gtag('js', new Date()); gtag('config', 'G-V4H50H9G3D'); </script>
+  <style>
+    body { font-family: sans-serif; max-width: 720px; margin: 0 auto; padding: 24px; }
+    .teaser-card { border: 1px solid #ddd; padding: 16px; margin: 12px 0; cursor: pointer; }
+    .teaser-card.expanded p { display: block; }
+    .teaser-card p { display: none; color: #555; }
+    #cta-sticky-footer { position: fixed; bottom: 0; left: 0; width: 100%; padding: 14px; background: #111; color: #fff; border: none; font-size: 16px; }
+  </style>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
+  <!-- Your GTM <noscript><iframe> snippet from Phase 1 stays here -->
+   <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5TX3Z439"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-  <main>
+
+  <header>
     <h1>Waypoint Supply Co.</h1>
-    <p>The next drop is coming. Get early access.</p>
-    <button id="cta-waitlist">Join the waitlist</button>
-  </main>
+    <p>The next drop is coming. Get early access before anyone else.</p>
+    <button id="cta-hero-top" onclick="document.getElementById('waitlist-form').scrollIntoView({behavior:'smooth'})">Join the waitlist</button>
+  </header>
+
+  <section>
+    <h2>What's dropping</h2>
+
+    <div class="teaser-card" id="teaser-trailpack" data-teaser-name="Trail Pack" onclick="this.classList.toggle('expanded')">
+      <h3>Trail Pack</h3>
+      <p>A lightweight day pack built for the next drop. Tap to preview.</p>
+    </div>
+
+    <div class="teaser-card" id="teaser-fieldjacket" data-teaser-name="Field Jacket" onclick="this.classList.toggle('expanded')">
+      <h3>Field Jacket</h3>
+      <p>Weather-resistant shell, limited colorway. Tap to preview.</p>
+    </div>
+
+    <div class="teaser-card" id="teaser-basecap" data-teaser-name="Base Cap" onclick="this.classList.toggle('expanded')">
+      <h3>Base Cap</h3>
+      <p>Structured six-panel cap. Tap to preview.</p>
+    </div>
+  </section>
+
+  <section id="waitlist-form">
+    <h2>Get early access</h2>
+    <div id="hubspot-form-container">
+      <!-- HubSpot form embed code goes here in Phase 6 -->
+      <p style="color:#999;">[Form loads here]</p>
+    </div>
+  </section>
+
+  <footer style="padding-bottom: 60px;">
+    <a href="https://instagram.com/example" target="_blank" rel="noopener">Follow on Instagram</a>
+  </footer>
+
+  <button id="cta-sticky-footer" onclick="document.getElementById('waitlist-form').scrollIntoView({behavior:'smooth'})">Join the waitlist</button>
+
 </body>
 </html>
